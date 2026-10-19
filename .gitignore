@@ -1,0 +1,50 @@
+# ---- secrets: NEVER commit ----
+.env
+*.key
+tools/vultr_api_key.txt
+tools/vultr_state.json
+tools/ssh/
+
+# ---- environments / downloads (recreated by setup) ----
+venv/
+.venv/
+__pycache__/
+*.pyc
+tools/*
+!tools/.gitkeep
+models/*
+!models/.gitkeep
+hyperframes/node_modules/
+hyperframes/package-lock.json
+hyperframes/**/vendor/
+hyperframes/**/renders/
+
+# ---- personal media & working files (your face/voice stay local) ----
+input/*
+!input/.gitkeep
+work/*
+!work/.gitkeep
+output/*
+!output/.gitkeep
+assets/broll/*
+!assets/broll/.gitkeep
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+*.weba
+*.aac
+
+# ---- personal edit plans (contain your transcript) - only the example is shared ----
+plans/*
+!plans/example_plan.py
+!plans/README.md
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

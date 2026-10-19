@@ -1,0 +1,86 @@
+{
+  "name": "finance_story (learned from reference Short T45WLa7nTjw)",
+  "canvas": {"width": 1080, "height": 1920, "fps": 30, "max_duration_s": 59},
+
+  "pacing": {
+    "avg_shot_length_s": 2.7,
+    "cut_every_s_range": [1.4, 4.7],
+    "remove_pauses": true,
+    "max_pause_kept_s": 0.15,
+    "speech_rate_wpm_target": 220,
+    "note": "Reference has 19 cuts in 54 s, no silences >0.4 s. Jump-cut every breath."
+  },
+
+  "camera": {
+    "mode": "alternate_two_angles",
+    "angles": [
+      {"name": "front_wide", "zoom": 1.00, "face_x": 0.50, "face_y": 0.28},
+      {"name": "tight_offset", "zoom": 1.22, "face_x": 0.42, "face_y": 0.25}
+    ],
+    "single_source_fallback": "simulate second angle with crop-zoom + horizontal offset on every cut",
+    "slow_push_in_per_shot": 0.03
+  },
+
+  "grade": {
+    "look": "warm low-key, cinematic",
+    "warmth": 0.08, "contrast": 1.08, "saturation": 0.92, "shadows_lift": -0.04,
+    "bottom_gradient": {"from_y": 0.70, "to_y": 1.00, "max_opacity": 0.75, "color": "#000000"},
+    "vignette": 0.25
+  },
+
+  "captions": {
+    "chunk_words": [1, 4],
+    "position_y": 0.55,
+    "align": "center",
+    "font": "bold geometric sans (Inter/SF Pro Bold; Windows fallback Segoe UI Bold)",
+    "size_px": 56,
+    "color": "#FFFFFF",
+    "shadow": {"offset": [0, 3], "blur": 6, "opacity": 0.6},
+    "animation": "hard cut in, no pop (clean documentary style)",
+    "keep_on_screen_until_next": true
+  },
+
+  "emphasis_text": {
+    "numbers_money": {
+      "trigger": "currency amounts / key stats",
+      "size_px": 84, "font": "sans extra-bold", "position_y": 0.17,
+      "hold_s": 2.0, "animation": "fade+scale 0.95->1.0 over 0.15 s"
+    },
+    "section_headers": {
+      "trigger": "list points (first/second/last thing) and the takeaway",
+      "line1": {"font": "sans bold", "size_px": 64},
+      "accent_word": {"font": "serif bold italic (Playfair/DM Serif; fallback Georgia Bold Italic)", "size_px": 80},
+      "build": "word-by-word, accent word arrives last on its own line, offset right",
+      "position_y": 0.55, "hold_s": 1.5
+    }
+  },
+
+  "motion_graphics": {
+    "icon_badges": {
+      "trigger": "concrete nouns being listed (rooms, items, options)",
+      "style": "dark translucent circle (#000 @55%), 1.5px white ring @60%, white flat line icon inside",
+      "diameter_px": 185,
+      "layout": "badges arranged on a thin connecting circle (r≈210 px) below the caption",
+      "animation": "each badge pops in (scale 0.6->1.0, 0.2 s, ease-out) when its word is spoken; connector line draws on"
+    },
+    "corner_icons": {
+      "trigger": "abstract concepts (saving, investing)",
+      "style": "same badge, 100 px, left/right of caption",
+      "animation": "fade in 0.2 s"
+    }
+  },
+
+  "audio": {
+    "voice": "loudness-normalised to about -14 LUFS, tight jump cuts",
+    "music": "none confirmed from analysis; if added, keep a soft bed 18-20 dB under the voice",
+    "sfx": "optional soft whoosh on section headers"
+  },
+
+  "structure": [
+    "0-3 s: hook = personal number/stake shown as big stat",
+    "3-6 s: framing question",
+    "body: numbered points, each opened by a section header with a serif accent word",
+    "concrete details illustrated with icon badges",
+    "last 3 s: payoff number as big stat, no outro/CTA card"
+  ]
+}

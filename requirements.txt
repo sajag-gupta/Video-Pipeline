@@ -1,0 +1,17 @@
+# Core video/audio (PyAV bundles the FFmpeg libraries, so no ffmpeg.exe is needed)
+av>=14,<20
+numpy>=2.0
+opencv-python>=4.10
+pillow>=10.4
+# Person segmentation + face tracking (models downloaded by setup into models/mediapipe)
+mediapipe>=0.10.21
+# Speech-to-text with word timestamps (model cached in models/hf)
+faster-whisper>=1.1
+# Hugging Face Hub + Spaces client (optional cloud generation)
+huggingface_hub>=0.30
+gradio_client>=1.5
+# Trust the OS certificate store (corporate TLS inspection)
+truststore>=0.10
+# Vultr GPU control over SSH
+paramiko>=3.5
+cryptography>=43

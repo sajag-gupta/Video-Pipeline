@@ -1,0 +1,9 @@
+{
+  "name": "video-pipeline-hyperframes",
+  "private": true,
+  "description": "HyperFrames CLI + GSAP + puppeteer-core for motion-graphics compositions (installed with --ignore-scripts)",
+  "dependencies": {
+    "hyperframes": "0.8.157",
+    "gsap": "3.14.2"
+  }
+}
